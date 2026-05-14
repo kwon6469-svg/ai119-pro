@@ -407,7 +407,7 @@ tr.best td { font-weight: 600; }
   <div class="card">
     <div class="card-title"><span class="num">1</span> <strong>채무자 및 담보제공자</strong> <span style="margin-left: auto; font-size: 10px; background: var(--danger-bg); color: var(--danger); padding: 2px 8px; border-radius: 10px; font-weight: 700;">필수</span></div>
     <div class="field-row">
-      <div class="field"><label>채무자(차주) 성명 <span class="req">*</span></label><input type="text" id="borrowerName" placeholder="예: 홍덕기"></div>
+      <div class="field"><label>채무자(차주) 성명 <span class="req">*</span></label><input type="text" id="borrowerName" placeholder="예: 홍OO"></div>
       <div class="field"><label>담보제공자 성명</label><input type="text" id="ownerName" placeholder="동일인이면 비움"></div>
     </div>
     <div class="field-row">
@@ -419,7 +419,7 @@ tr.best td { font-weight: 600; }
   <div class="card">
     <div class="card-title"><span class="num">2</span> <strong>물건지 주소 (AI 자동시세)</strong> <span style="margin-left: auto; font-size: 10px; background: var(--danger-bg); color: var(--danger); padding: 2px 8px; border-radius: 10px; font-weight: 700;">필수</span></div>
     <div class="field-row one">
-      <div class="field"><label>담보 주소 <span class="req">*</span></label><input type="text" id="address" placeholder="예: 서울 서초구 잠원동 76-2 706호"><div class="help-text ai-note">💡 시·구·동 입력 후 AI 시세조회 클릭</div></div>
+      <div class="field"><label>담보 주소 <span class="req">*</span></label><input type="text" id="address" placeholder="예: 서울 서초구 잠원동 OO아파트 7층"><div class="help-text ai-note">💡 시·구·동 입력 후 AI 시세조회 클릭</div></div>
     </div>
     <div class="field-row">
       <div class="field"><label>담보종류 <span class="req">*</span></label><select id="assetType"><option value="apt">아파트</option><option value="officetel">주거용 오피스텔</option><option value="villa">빌라/다세대</option><option value="house">단독주택</option><option value="land">토지</option><option value="commercial">상가/오피스</option></select></div>
@@ -575,10 +575,21 @@ tr.best td { font-weight: 600; }
       <div class="tier-group">
         <div class="tier-group-title">🏛 2금융권 (금리 7~13%, 안전)</div>
         <table><thead><tr><th style="width: 40%;">금융기관</th><th style="width: 12%; text-align: right;">LTV</th><th style="width: 18%; text-align: right;">금리범위</th><th style="width: 18%; text-align: right;">예상한도</th><th style="width: 12%; text-align: center;">가능</th></tr></thead><tbody id="tier2Body"></tbody></table>
+        <div style="background: var(--warn-bg); border-left: 4px solid var(--warn); padding: 10px 14px; border-radius: 6px; margin-top: 10px; font-size: 12px; color: var(--text); line-height: 1.7;">
+          ⏰ <strong style="color: var(--warn);">2금융권 대출 진행시 유의사항</strong><br>
+          소득요건·신용요건·정부 대출 규제가 적용되며, 대출 신청부터 기표(자금 실행)까지 영업일 기준 <strong>최저 1주일에서 최대 1개월</strong>이 소요됩니다.<br><br>
+          💡 <strong style="color: var(--info);">급전이 필요하신 경우 추천 전략:</strong> 우선 1차로 <strong>급전 전문 대부회사 브릿지 대출</strong>을 이용하시고, 자금 사용 후 <strong>최단 기간 내 2금융권으로 대환 대출</strong>을 진행하시는 것이 가장 유리합니다.
+        </div>
       </div>
       <div class="tier-group">
         <div class="tier-group-title tier3">🏦 3금융권 (금리 9~20%, 후순위 가능)</div>
-        <table><thead><tr><th style="width: 40%;">업권</th><th style="width: 12%; text-align: right;">LTV</th><th style="width: 18%; text-align: right;">금리범위</th><th style="width: 18%; text-align: right;">예상한도</th><th style="width: 12%; text-align: center;">가능</th></tr></thead><tbody id="tier3Body"></tbody></table>
+        <table><thead><tr><th style="width: 40%;">업권</th><th style="width: 12%; text-align: right;">최대 LTV</th><th style="width: 18%; text-align: right;">금리범위</th><th style="width: 18%; text-align: right;">예상한도</th><th style="width: 12%; text-align: center;">가능</th></tr></thead><tbody id="tier3Body"></tbody></table>
+        <div style="background: var(--danger-bg); border-left: 4px solid var(--danger); padding: 10px 14px; border-radius: 6px; margin-top: 10px; font-size: 12px; color: var(--text); line-height: 1.7;">
+          🎯 <strong style="color: var(--danger);">3금융권 업권별 특성 안내</strong><br>
+          • <strong>캐피탈사·대형대부</strong>: 주로 <strong>아파트 위주 대출</strong> 취급. 정부 규제사항 적용 + 일정 소득·신용 요건 심사<br>
+          • <strong>소형대부 (오케이대부캐피탈교대 등)</strong>: 아파트 외 <strong>연립·다세대·단독주택·토지 등 특수 담보물건</strong> 취급 가능. 소액 대출 + 후순위 진입 가능<br><br>
+          💎 <strong style="color: var(--info);">담보 종류에 따라 진행 가능한 금융권이 달라집니다.</strong> 권상훈 대표가 차주분 담보·신용·소득 조건을 종합 검토하여 가장 유리한 트랙을 추천드립니다.
+        </div>
       </div>
       <div class="matching-notice">💡 <strong>대출진행 확정시 전문 매칭 진행</strong><br>전국 2·3금융권 금융기관은 <strong>수천 개</strong>가 운영중입니다. 위 표는 업권별 평균치이며, 진행 의사 확인 후 <strong>오케이대부캐피탈교대가 직접 정밀 매칭 작업</strong>을 통해 차주에게 가장 유리한 금융기관·상품을 선정해드립니다.</div>
     </div>
@@ -653,9 +664,9 @@ const VALUATION_DB = {"서초구":{apt_per_pyeong:6500,villa_per_pyeong:2800,hou
 
 const TIER2_GROUPS = [{name:'저축은행',desc:'전국 79개사',rate_min:7.0,rate_max:11.0},{name:'농협 (지역농협)',desc:'전국 1,118개 조합',rate_min:7.5,rate_max:12.0},{name:'수협',desc:'전국 90개 조합',rate_min:7.5,rate_max:12.0},{name:'축협',desc:'전국 130개 조합',rate_min:7.5,rate_max:12.0},{name:'산림조합',desc:'전국 142개 조합',rate_min:8.0,rate_max:12.5},{name:'새마을금고',desc:'전국 1,294개 금고',rate_min:7.5,rate_max:12.5},{name:'신협',desc:'전국 866개 조합',rate_min:7.5,rate_max:12.0}];
 
-const TIER3_GROUPS = [{name:'캐피탈사',desc:'여신전문금융',rate_min:9.0,rate_max:13.0},{name:'대형대부',desc:'자산 100억 이상',rate_min:11.0,rate_max:15.0},{name:'소형대부 (오케이대부캐피탈교대 ★)',desc:'서초구청 등록',rate_min:14.0,rate_max:20.0,isOurs:true}];
+const TIER3_GROUPS = [{name:'캐피탈사',desc:'여신전문금융 · 아파트 위주',rate_min:9.0,rate_max:13.0},{name:'대형대부',desc:'자산 100억 이상 · 아파트 위주',rate_min:11.0,rate_max:15.0},{name:'소형대부',desc:'소액대출 · 아파트 외 특수담보물건 취급 (오케이대부캐피탈교대 ★)',rate_min:14.0,rate_max:20.0,isOurs:true}];
 
-const CASES = {jamwon:{borrowerName:'홍덕기',ownerName:'김혜진',contactPhone:'010-0000-0000',relationship:'spouse',address:'서울 서초구 잠원동 76-2 706호',assetType:'apt',areaSqm:46.95,requestAmount:60000,loanPurpose:'매매잔금',loanPeriodValue:5,loanPeriodUnit:'years',repaymentPlan:'원리금균등',firstLien:59400,firstLienBank:'삼성화재',secondLien:0,rentDeposit:0,tenantConsent:'none',rooms:1,appraisalPrice:0,realPrice:165000,auctionPrice:0,borrowerType:'직장인 육아휴직',housingStatus:'one_dispose',income:9000,existingDebt:0,creditGrade:3},songpa:{borrowerName:'김유리',ownerName:'이상근',contactPhone:'010-0000-0000',relationship:'spouse',address:'서울 송파구 송파동 176-8 2동 302호',assetType:'villa',areaSqm:46.77,requestAmount:20000,loanPurpose:'사업자금',loanPeriodValue:3,loanPeriodUnit:'years',repaymentPlan:'이자만 납입',firstLien:0,firstLienBank:'',secondLien:0,rentDeposit:26000,tenantConsent:'no',rooms:2,appraisalPrice:56100,realPrice:55500,auctionPrice:0,borrowerType:'개인사업자',housingStatus:'one_keep',income:5000,existingDebt:100,creditGrade:3},daegu:{borrowerName:'이애란',ownerName:'',contactPhone:'010-0000-0000',relationship:'self',address:'대구 동구 동대구로 590 화성파크드림 110-405',assetType:'apt',areaSqm:84.81,requestAmount:67000,loanPurpose:'기존대출 대환',loanPeriodValue:10,loanPeriodUnit:'years',repaymentPlan:'원리금균등',firstLien:80640,firstLienBank:'신협',secondLien:0,rentDeposit:0,tenantConsent:'none',rooms:1,appraisalPrice:74500,realPrice:74500,auctionPrice:0,borrowerType:'개인사업자',housingStatus:'one_keep',income:7600,existingDebt:0,creditGrade:3}};
+const CASES = {jamwon:{borrowerName:'홍OO',ownerName:'김OO',contactPhone:'010-XXXX-XXXX',relationship:'spouse',address:'서울 서초구 잠원동 OO아파트 7층',assetType:'apt',areaSqm:46.95,requestAmount:60000,loanPurpose:'매매잔금',loanPeriodValue:5,loanPeriodUnit:'years',repaymentPlan:'원리금균등',firstLien:59400,firstLienBank:'삼성화재',secondLien:0,rentDeposit:0,tenantConsent:'none',rooms:1,appraisalPrice:0,realPrice:165000,auctionPrice:0,borrowerType:'직장인 육아휴직',housingStatus:'one_dispose',income:9000,existingDebt:0,creditGrade:3},songpa:{borrowerName:'김OO',ownerName:'이OO',contactPhone:'010-XXXX-XXXX',relationship:'spouse',address:'서울 송파구 송파동 OO빌라 3층',assetType:'villa',areaSqm:46.77,requestAmount:20000,loanPurpose:'사업자금',loanPeriodValue:3,loanPeriodUnit:'years',repaymentPlan:'이자만 납입',firstLien:0,firstLienBank:'',secondLien:0,rentDeposit:26000,tenantConsent:'no',rooms:2,appraisalPrice:56100,realPrice:55500,auctionPrice:0,borrowerType:'개인사업자',housingStatus:'one_keep',income:5000,existingDebt:100,creditGrade:3},daegu:{borrowerName:'이OO',ownerName:'',contactPhone:'010-XXXX-XXXX',relationship:'self',address:'대구 동구 동대구로 OO아파트 1동',assetType:'apt',areaSqm:84.81,requestAmount:67000,loanPurpose:'기존대출 대환',loanPeriodValue:10,loanPeriodUnit:'years',repaymentPlan:'원리금균등',firstLien:80640,firstLienBank:'신협',secondLien:0,rentDeposit:0,tenantConsent:'none',rooms:1,appraisalPrice:74500,realPrice:74500,auctionPrice:0,borrowerType:'개인사업자',housingStatus:'one_keep',income:7600,existingDebt:0,creditGrade:3}};
 
 let currentResult=null;let uploadedFiles={1:null,2:null,3:[]};
 
